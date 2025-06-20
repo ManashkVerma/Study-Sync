@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Sync</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/BG_logo_Study_sync-removebg-preview.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="images/BG_logo_Study_sync-removebg-preview.png" alt="Logo" />
+      <h1 style="margin-right: auto">My Cool Website</h1>
+      <nav>
+        <a href="#">Home</a> | <a href="#">About</a> |
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <div class="sidebar-toggle" id="sidebarToggle">&#9776;</div>
+    <div class="container">
+      <aside class="sidebar" id="sidebar">
+        <button id="addProjectBtn">+ New Project</button>
+        <button id="addYoutubeProjectBtn" title="Add YouTube Playlist Project">
+          <span class="youtube-icon">&#9654;</span> YouTube Project
+        </button>
+        <div class="sidebar-title">Sample Projects</div>
+        <ul class="project-list" id="projectList">
+          <li data-project-id="0">Study Planner</li>
+          <li data-project-id="1">Assignment Tracker</li>
+          <li data-project-id="2">Exam Prep Board</li>
+        </ul>
+      </aside>
+      <main class="main-content" id="mainContent"></main>
+    </div>
+    <div id="youtubeDialogOverlay">
+      <div id="youtubeDialog">
+        <label for="youtubePlaylistInput">YouTube Playlist URL</label>
+        <input
+          type="text"
+          id="youtubePlaylistInput"
+          placeholder="Paste playlist URL here..."
+        />
+        <div class="dialog-btn-row">
+          <button id="youtubeDialogCancel" class="cancel">Cancel</button>
+          <button id="youtubeDialogAdd">Add Project</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
